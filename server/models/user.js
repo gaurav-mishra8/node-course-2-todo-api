@@ -31,8 +31,9 @@ var UserSchema = new mongoose.Schema({
       type: String,
       required: true
     }
-  }]
-});
+  }]},{
+    usePushEach: true
+  });
 
 UserSchema.pre('save', function(next) {
   var user = this;
